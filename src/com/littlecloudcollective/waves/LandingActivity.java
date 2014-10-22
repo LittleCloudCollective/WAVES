@@ -30,17 +30,17 @@ public class LandingActivity extends ActionBarActivity {
 		
 		//Add tabs
 		Tab tab = actionBar.newTab()
-						   .setText(R.string.feed_tab)
+						   .setIcon(R.drawable.feed_icon)
 						   .setTabListener(new TabListener<SoundFragment>(this, "feed", SoundFragment.class));
 		actionBar.addTab(tab);
 		
 		tab = actionBar.newTab()
-				   .setText(R.string.discover_tab)
+					.setIcon(R.drawable.discover_icon)
 				   .setTabListener(new TabListener<DiscoverFragment>(this, "discover", DiscoverFragment.class));
 		actionBar.addTab(tab);
 		
 		tab = actionBar.newTab()
-				   .setText(R.string.profile_tab)
+					.setIcon(R.drawable.profile_icon)
 				   .setTabListener(new TabListener<ProfileFragment>(this, "profile", ProfileFragment.class));
 		actionBar.addTab(tab);
 	}

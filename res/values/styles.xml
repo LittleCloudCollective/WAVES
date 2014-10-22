@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light">
 
         <!--
             Theme customizations available in newer API levels can go in
@@ -12,17 +12,16 @@
         <!-- Support library compatibility -->
         <item name="actionBarTabStyle">@style/MyActionBarTabs</item>
     </style>
-
     
     <!-- ActionBar tabs styles -->
     <style name="MyActionBarTabs"
            parent="@style/Widget.AppCompat.ActionBar.TabView">
         
         <!-- tab indicator -->
-        <item name="android:background">@drawable/options_menu_bg</item>
+        <item name="android:background">@drawable/tab_bkg</item>
 
         <!-- Support library compatibility -->
-       <item name="background">@drawable/options_menu_bg</item>
+       <item name="background">@drawable/tab_bkg</item>
     </style>
     
     

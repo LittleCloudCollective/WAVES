@@ -12,6 +12,7 @@ public class AudioRecorderActivity extends ActionBarActivity {
 	private View mPlayButton;
 	private View mStopButton;
 	private View mRecordButton;
+	private View mFakeButton;
 
 	
 	@Override

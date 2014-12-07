@@ -20,10 +20,11 @@ public class LandingActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_landing);
 		
+		//viewPager = (ViewPager) findViewById(R.id.pager);
 		ActionBar actionBar = getSupportActionBar();
-
+		//mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
 			
-
+		//viewPager.setAdapter(mAdapter);
 		actionBar.setHomeButtonEnabled(false);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		

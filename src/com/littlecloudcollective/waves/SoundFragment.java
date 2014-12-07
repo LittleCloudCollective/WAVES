@@ -3,8 +3,6 @@ package com.littlecloudcollective.waves;
 import java.util.ArrayList;
 import java.util.Date;
 
-import org.lucasr.twowayview.TwoWayView;
-
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.text.format.DateUtils;
@@ -26,12 +24,13 @@ public class SoundFragment extends ListFragment {
 		super.onCreate(savedInstanceState);
 		mSounds = SoundLab.get(getActivity()).getSounds();
 		setHasOptionsMenu(true);
-		//SoundAdapter adapter = new SoundAdapter(mSounds);
-		//setListAdapter(adapter);
+		SoundAdapter adapter = new SoundAdapter(mSounds);
+		setListAdapter(adapter);
+		
+		
 	}
 	
-	
-/*	private class SoundAdapter extends ArrayAdapter<Sound> {
+	private class SoundAdapter extends ArrayAdapter<Sound> {
 		public SoundAdapter(ArrayList<Sound> sounds) {
 			super(getActivity(), 0, sounds);
 		}
@@ -70,7 +69,7 @@ public class SoundFragment extends ListFragment {
 			return convertView;
 		}
 	}
-*/	
+	
 	
 	//@Override
 	//public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {

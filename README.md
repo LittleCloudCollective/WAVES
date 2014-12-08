@@ -1,6 +1,6 @@
 WAVES
 =====
-A Little Cloud Collective project 
+A Little Cloud Collective project. 
 
 Currently under development by Priyanka Pathak (@priyankacpathak).
 

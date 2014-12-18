@@ -90,4 +90,9 @@ public class AudioRecorder {
         mRecorder = null;
         recordStart = false;
     }
+    
+    public void clearSound(){
+    	File file = new File(mFile);
+    	file.delete();
+    }
 }

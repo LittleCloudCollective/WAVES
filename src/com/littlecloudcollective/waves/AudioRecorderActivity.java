@@ -18,6 +18,7 @@ public class AudioRecorderActivity extends ActionBarActivity {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_record);
+		mRecorder.clearSound();
 		
 		ActionBar actionBar = getSupportActionBar();
 	    actionBar.setDisplayHomeAsUpEnabled(true);

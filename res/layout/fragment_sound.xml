@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/sound_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="false"
-        android:layout_toRightOf="@+id/pin_map_icon"
-        android:paddingLeft="2dp"
-        android:paddingTop="10dp"
-        android:text="@string/sound_location_label"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
+    
     <ImageView
         android:id="@+id/pin_map_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_alignBottom="@+id/sound_location"
         android:layout_alignParentLeft="true"
-        android:baselineAlignBottom="false"
         android:paddingBottom="2dp"
         android:src="@drawable/pin_map_icon" />
 
-    <ImageView
-        android:id="@+id/divider"
+    <TextView
+        android:id="@+id/sound_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/username_label"
-        android:paddingLeft="60dp"
-        android:paddingRight="5dp"
-        android:src="@drawable/divider" />
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/sound_title"
+        android:layout_marginTop="20dp"
+        android:text="@string/sound_location_label"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/time_label"
@@ -42,28 +30,44 @@
         android:layout_alignBaseline="@+id/sound_location"
         android:layout_alignBottom="@+id/sound_location"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp"
         android:text="@string/sound_time_label"
+        android:layout_marginRight="5dp"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+	<LinearLayout
+	    android:id="@+id/container"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:adjustViewBounds="true"
+	    android:orientation="vertical"
+	    android:layout_marginTop="45dp"
+	    android:layout_marginBottom="10dp" >
 
-    <ImageView
-        android:id="@+id/sound_map"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:paddingBottom="-20dp"
-        android:layout_marginTop="-20dp"
-        android:src="@drawable/sound_map" />
-
+		<ImageView
+	        android:id="@+id/sound_map"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/sound_map" />
+	
+		<ImageButton
+		    android:id="@+id/sound_vis"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:adjustViewBounds="true"
+		    android:background="@null"
+		    android:cropToPadding="true"
+		    android:scaleType="fitStart"
+		    android:src="@drawable/sound_vis_2" />
+    
+	</LinearLayout>
+    
     <TextView
         android:id="@+id/username_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/sound_map"
-        android:layout_marginTop="28dp"
-        android:paddingLeft="60dp"
+        android:layout_below="@+id/container"
+        android:layout_marginLeft="7dp"
         android:text="@string/user_username_label"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -71,34 +75,19 @@
         android:id="@+id/sound_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/divider"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="7dp"
         android:paddingBottom="20dp"
-        android:paddingLeft="60dp"
         android:text="@string/sound_title_label"
-        android:textSize="14dp" />
+        android:textSize="14sp" />
 
     <ImageView
-        android:id="@+id/profile_photo"
+        android:id="@+id/divider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-10dp"
-        android:layout_alignTop="@+id/username_label"
-        android:layout_toRightOf="@+id/pin_map_icon"
-        android:src="@drawable/default_profile_thumbnail" />
-
-    <ImageButton
-        android:id="@+id/sound_vis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/sound_title"
-        android:layout_alignParentLeft="true"
-        android:adjustViewBounds="false"
-        android:background="@drawable/btn_bkg"
-        android:baselineAlignBottom="false"
-        android:cropToPadding="false"
-        android:paddingBottom="20dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/sound_vis_2" />
+        android:layout_alignLeft="@+id/username_label"
+        android:layout_below="@+id/username_label"
+        android:src="@drawable/divider" />
 
 </RelativeLayout>

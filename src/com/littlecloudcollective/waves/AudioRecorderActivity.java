@@ -8,7 +8,6 @@ import android.view.View;
 
 public class AudioRecorderActivity extends ActionBarActivity {
 	private AudioRecorder mRecorder = new AudioRecorder();
-	private AudioPlayer mPlayer = new AudioPlayer();
 	private View mPlayButton;
 	private View mStopButton;
 	private View mRecordButton;

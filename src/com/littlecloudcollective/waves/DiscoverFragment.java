@@ -1,9 +1,12 @@
 package com.littlecloudcollective.waves;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -21,6 +24,7 @@ public class DiscoverFragment extends SupportMapFragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+		super.onCreateView(inflater, mMapView, savedInstanceState);
 		View v = inflater.inflate(R.layout.fragment_discover, parent, false);
 		
 		// Gets the MapView from the XML layout and creates it
@@ -32,7 +36,6 @@ public class DiscoverFragment extends SupportMapFragment {
 	    mGoogleMap.getUiSettings().setMyLocationButtonEnabled(false);
 	    mGoogleMap.setMyLocationEnabled(true);
 		
-		
 		//Reference to the Google map
 		//mGoogleMap = getMap();
 		
@@ -41,6 +44,15 @@ public class DiscoverFragment extends SupportMapFragment {
 		
 		return v;
 	}
+	
+	/**@Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+            //perform search
+            return true;
+        }
+        return false;
+    } **/
 	
     @Override
     public void onResume() {

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class SoundFragment extends ListFragment {
 	private ArrayList<Sound> mSounds;
-	private AudioPlayer mPlayer = new AudioPlayer();
+	private AudioRecorder mPlayer = new AudioRecorder();
 	private ImageButton mImageButton;
 	private Date now = new Date();
 	private long now1 = now.getTime();
@@ -62,7 +62,7 @@ public class SoundFragment extends ListFragment {
 			mImageButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-					mPlayer.play(getActivity());
+					mPlayer.onPlay(true);
 				}
 			});
 			

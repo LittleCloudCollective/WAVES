@@ -8,25 +8,31 @@
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
-               
+
+
         <!-- Support library compatibility -->
         <item name="actionBarTabStyle">@style/MyActionBarTabs</item>
     </style>
-    
+
     <!-- ActionBar tabs styles -->
-    <style name="MyActionBarTabs"
-           parent="@style/Widget.AppCompat.ActionBar.TabView">
-        
+    <style name="MyActionBarTabs" parent="@style/Widget.AppCompat.ActionBar.TabView">
+
         <!-- tab indicator -->
         <item name="android:background">@drawable/tab_bkg</item>
 
         <!-- Support library compatibility -->
-       <item name="background">@drawable/tab_bkg</item>
+        <item name="background">@drawable/tab_bkg</item>
     </style>
-    
-    
-        <!-- Application theme. -->
+
+    <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
 </resources>

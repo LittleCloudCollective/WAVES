@@ -17,7 +17,6 @@ public class AudioRecorderActivity extends ActionBarActivity {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_record);
-		mRecorder.clearSound();
 		
 		ActionBar actionBar = getSupportActionBar();
 	    actionBar.setDisplayHomeAsUpEnabled(true);
@@ -47,41 +46,7 @@ public class AudioRecorderActivity extends ActionBarActivity {
 				}
 			}
 		});
-		
-		//setRetainInstance(true);
+	
 	}
 	
-/*
-	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-		View v = inflater.inflate(R.layout.fragment_record,  parent, false);
-		
-		mPlayButton = (Button)v.findViewById(R.id.play_button);
-		mPlayButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v){
-				mRecorder.onPlay(true);
-			}
-		});
-		
-		mRecordButton = (Button)v.findViewById(R.id.record_button);
-		mRecordButton.setOnClickListener(new View.OnClickListener() {
-			
-			public void onClick(View v) {
-				mRecorder.onRecord(true);
-			}
-		});
-		
-		mStopButton = (Button)v.findViewById(R.id.stop_button);
-		mStopButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				if (AudioRecorder.playStart == true){
-					mRecorder.stopPlaying();
-				} else if (AudioRecorder.recordStart == true){
-					mRecorder.stopRecording();
-				}
-			}
-		});
-		
-		return v;
-	}
-*/
 }

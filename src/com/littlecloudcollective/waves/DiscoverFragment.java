@@ -2,10 +2,10 @@ package com.littlecloudcollective.waves;
 
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -41,6 +41,8 @@ public class DiscoverFragment extends SupportMapFragment implements ConnectionCa
             .addOnConnectionFailedListener(this)
             .addApi(LocationServices.API)
             .build();
+        
+        Log.w("CHECKPOINT", "And your build API client command succeeded");
     };
     
     @Override
@@ -49,6 +51,8 @@ public class DiscoverFragment extends SupportMapFragment implements ConnectionCa
                 mGoogleApiClient);
         if (mLastLocation != null) {            
             myLocation = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+            
+            Log.w("CHECKPOINT", "Value of lat/long is defined as:" + Double.toString(mLastLocation.getLatitude()) + ", " + Double.toString(mLastLocation.getLongitude()));
         }
     }
     
@@ -65,11 +69,14 @@ public class DiscoverFragment extends SupportMapFragment implements ConnectionCa
 	    mGoogleMap = mMapView.getMap();
 	    mGoogleMap.getUiSettings().setMyLocationButtonEnabled(false);
 	    
-	  //Show the user's location
+	    //Show the user's location
 	    mGoogleMap.setMyLocationEnabled(true);
 	    
-
-		
+	    //Connects to Google Play Services, which then executes onConnected
+	    //Log.w("CHECKPOINT", "Guess what, you're about to connect");
+	    //mGoogleApiClient.connect();
+	    //Log.w("CHECKPOINT", "Guess what, you're connected!!!!");
+	    
 	    //mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLocation, ZOOM_NUM));
 	    
 		

@@ -34,5 +34,21 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">16dp</item>
     </style>
+    
+    <style name="SeekBar" parent="android:Widget.SeekBar">
+      <item name="android:progressDrawable">@drawable/seekbar_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/seekbar_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:minHeight">13dip</item>
+      <item name="android:maxHeight">13dip</item>
+      <item name="android:thumb">@drawable/seekbar_scrubber_control_selector_holo_light</item>
+      <item name="android:thumbOffset">16dip</item>
+      <item name="android:paddingLeft">16dip</item>
+      <item name="android:paddingRight">16dip</item>
+    </style>
+    
+    <style name="editTextClassic" parent="@android:style/Widget.EditText">
+    <item name="android:textColor">@android:color/primary_text_light</item>
+    <item name="android:background">@android:drawable/edit_text</item>
+</style>
 
 </resources>

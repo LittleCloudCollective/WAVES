@@ -1,43 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/btn_bkg_white" >
-
-    <ImageView
-        android:id="@+id/sound_vis_record"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/sound_vis" />
+    android:background="#151413" >
 
     <ImageButton
-        android:id="@+id/record_button"
+        android:id="@+id/recordPlayButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/stop_button"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/btn_bkg_white"
-        android:src="@drawable/record_button" />
+        android:layout_marginBottom="58dp"
+        android:background="#151413"
+        android:src="@drawable/record_button_dynamic"
+        tools:ignore="ContentDescription" />
 
-    <ImageButton
-        android:id="@+id/stop_button"
-        android:layout_width="wrap_content"
+    <SeekBar
+        android:id="@+id/SeekBar"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/play_button"
-        android:layout_toRightOf="@+id/record_button"
-        android:background="@drawable/btn_bkg_white"
-        android:src="@drawable/stop_button" />
-
-    <ImageButton
-        android:id="@+id/play_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sound_vis_record"
-        android:layout_marginTop="26dp"
-        android:layout_toLeftOf="@+id/record_button"
-        android:background="@drawable/btn_bkg_white"
-        android:src="@drawable/play_button" />
+        android:layout_above="@+id/recordPlayButton"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="64dp"
+        android:max="30"
+        android:progress="0"
+        android:progressDrawable="@drawable/seekbar_scrubber_progress_horizontal_holo_light"
+        android:thumb="@drawable/seekbar_scrubber_control_selector_holo_light" />
 
 </RelativeLayout>

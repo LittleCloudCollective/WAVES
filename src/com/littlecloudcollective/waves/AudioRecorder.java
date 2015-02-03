@@ -20,7 +20,7 @@ public class AudioRecorder {
     public boolean isRecording;
     public boolean isPlaying;
     int recordTime;
-    Handler handler;
+    Handler handler = new Handler();
 	
 	public void onRecord(boolean start) {
 		if (start) {

@@ -19,6 +19,7 @@ public class AudioRecorder {
     private static MediaPlayer   mPlayer;
     public boolean isRecording;
     public boolean isPlaying;
+    public String lastFileName;
     int recordTime;
     Handler handler = new Handler();
 	
@@ -92,6 +93,7 @@ public class AudioRecorder {
 			Uri uri = Uri.parse(fileName);
 			mPlayer = MediaPlayer.create(c, uri);
 			
+			
 			mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 				public void onCompletion(MediaPlayer mp) {
 					stopPlayer();
@@ -113,6 +115,7 @@ public class AudioRecorder {
 	     public void run(){
 		     if(isRecording){ 
 			      recordTime++;
+			      Log.w("COUNT", String.valueOf(recordTime));
 			      // Delay 1s before next call      
 			      handler.postDelayed(this, 1000);
 		     	}

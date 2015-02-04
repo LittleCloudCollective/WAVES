@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.SeekBar;
@@ -25,6 +26,7 @@ public class AudioRecorderActivity extends ActionBarActivity {
 		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
 		                               // WindowManager.LayoutParams.FLAG_FULLSCREEN);        
 		setContentView(R.layout.activity_record);
+		final Handler mHandler = new Handler();
 		
 		ActionBar actionBar = getSupportActionBar();
 	    actionBar.setDisplayHomeAsUpEnabled(true);
@@ -43,18 +45,24 @@ public class AudioRecorderActivity extends ActionBarActivity {
 	                 mRecorder.onRecord(true);
 	                 isRecording = true;
 	                 
-	         	    final Handler mHandler = new Handler();
-	        	    final Runnable mRunnable = new Runnable() {
-
+	                 
+	         	    
+	                 Runnable mRunnable = new Runnable() {
+	                	
 	        	        @Override
 	        	        public void run() {
-	        	            if(mRecorder.isRecording){
-	        	                int mCurrentPosition = mRecorder.getCurrentPosition() / 1000;
+	        	        Log.w("RUNNNNNABLE", "Runnable activated, and isRecording = " + String.valueOf(isRecording));
+	        	            if(isRecording){
+	        	                int mCurrentPosition = mRecorder.getCurrentPosition();
+	        	                Log.w("POSITION", String.valueOf(mCurrentPosition));
 	        	                mSeekBar.setProgress(mCurrentPosition);
+	        	                mHandler.postDelayed(this, 1000);
 	        	            }
-	        	            mHandler.postDelayed(this, 1000);
+	        	            
 	        	        }
 	        	    };
+	        	    
+	        	    mRunnable.run();
 	        	    
 	                 break;
 	             case MotionEvent.ACTION_UP:

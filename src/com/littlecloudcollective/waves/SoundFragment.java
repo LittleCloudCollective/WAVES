@@ -62,7 +62,7 @@ public class SoundFragment extends ListFragment {
 			mImageButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-					mPlayer.playSound(getActivity());
+					mPlayer.startPlaying();
 				}
 			});
 			

@@ -14,13 +14,13 @@ public class SoundLab {
 	private SoundLab(Context appContext) {
 		mAppContext = appContext;
 		mSounds = new ArrayList<Sound>();
-		for (int i = 1; i < 6; i++) {
+		/**for (int i = 1; i < 6; i++) {
 			Sound s = new Sound();
 			s.setTitle("Sound description #" + i);
 			s.setLocation("Location #" + i);
 			s.setUsername("User #" + i);
 			mSounds.add(s);
-		}
+		} **/
 	}
 	
 	public static SoundLab get(Context c) {
@@ -34,11 +34,11 @@ public class SoundLab {
 		return mSounds;
 	}
 	
-	public Sound getSound(UUID id) {
+	/**public Sound getSound(String id) {
 		for (Sound s : mSounds) {
 			if (s.getId().equals(id))
 				return s;
 		}
 		return null;
-	}
+	} **/
 }

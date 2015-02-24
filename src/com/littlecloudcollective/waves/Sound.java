@@ -5,24 +5,53 @@ import java.util.UUID;
 
 public class Sound {
 
-	private UUID mId;
-	private String mTitle;
-	private String mUsername;
-	private String mLocation;
-	private Date mDate;
-	private Object mSound;
+	private int mId;
+	private String mTitle, mUsername, mLocation, mUserId, mSound, mTime, mSoundViz; //Items from the sound database
+	private String mProfilePhoto; //Items from the users database
+	private Double mLatitude, mLongitude;
 	
-	
-	public Sound() {
-		//generate unique identifier
-		setId(UUID.randomUUID());
+
+	public String getUserId() {
+		return mUserId;
 	}
 
-	public UUID getId() {
+	public void setUserId(String userId) {
+		mUserId = userId;
+	}
+
+	public String getSoundViz() {
+		return mSoundViz;
+	}
+
+	public void setSoundViz(String soundViz) {
+		mSoundViz = soundViz;
+	}
+
+	public Double getLatitude() {
+		return mLatitude;
+	}
+
+	public void setLatitude(Double latitude) {
+		mLatitude = latitude;
+	}
+
+	public Double getLongitude() {
+		return mLongitude;
+	}
+
+	public void setLongitude(Double longitude) {
+		mLongitude = longitude;
+	}
+
+	public String getTime() {
+		return mTime;
+	}
+
+	public int getId() {
 		return mId;
 	}
 
-	public void setId(UUID id) {
+	public void setId(int id) {
 		mId = id;
 	}
 
@@ -50,19 +79,23 @@ public class Sound {
 		mLocation = location;
 	}
 
-	public Date setDate() {
-		return mDate;
+	public String setTime(String time) {
+		return mTime;
 	}
 
-	public void setDate(Date date) {
-		mDate = date;
-	}
-
-	public Object getSound() {
+	public String getSound() {
 		return mSound;
 	}
 
-	public void setSound(Object sound) {
+	public void setSound(String sound) {
 		mSound = sound;
+	}
+	
+	public String getProfilePhoto() {
+		return mProfilePhoto;
+	}
+
+	public void setProfilePhoto(String profilePhoto) {
+		mProfilePhoto = profilePhoto;
 	}
 }

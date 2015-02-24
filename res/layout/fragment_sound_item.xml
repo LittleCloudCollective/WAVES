@@ -43,12 +43,11 @@
 	    android:layout_marginTop="45dp"
 	    android:layout_marginBottom="10dp" >
 
-		<ImageView
+		<com.littlecloudcollective.waves.FeedImageView
 	        android:id="@+id/sound_map"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:adjustViewBounds="true"
-	        android:src="@drawable/sound_map" />
+	        android:adjustViewBounds="true" />
 	
 		<ImageButton
 		    android:id="@+id/sound_vis"
@@ -89,5 +88,13 @@
         android:layout_alignLeft="@+id/username_label"
         android:layout_below="@+id/username_label"
         android:src="@drawable/divider" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/time_label"
+        android:layout_below="@+id/container"
+        android:src="@drawable/default_profile_thumbnail" />
 
 </RelativeLayout>

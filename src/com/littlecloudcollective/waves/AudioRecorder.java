@@ -14,13 +14,14 @@ import android.util.Log;
 public class AudioRecorder {
 
 	private static final String LOG_TAG = "AudioRecordTest";
-    private String fileName = Environment.getExternalStorageDirectory()+"/audio"+System.currentTimeMillis()+".3gp";
     private static MediaRecorder mRecorder;
     private static MediaPlayer   mPlayer;
+    Context context;
     public boolean isRecording;
     public boolean isPlaying;
     public String lastFileName;
     int recordTime;
+    private String fileName = context.getCacheDir() + "/wavesaudio/" + "temp" +".3gp";
     Handler handler = new Handler();
 	
 	public void onRecord(boolean start) {
@@ -125,5 +126,9 @@ public class AudioRecorder {
 	public int getCurrentPosition(){
 		return recordTime;
 	};
+	
+	public String getSoundPath(){
+		return fileName;
+	}
 	
 }

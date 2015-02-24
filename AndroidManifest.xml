@@ -31,6 +31,7 @@
         android:targetSdkVersion="10" />
 
     <application
+        android:name="com.littlecloudcollective.waves.volley.AppController"
         android:allowBackup="true"
         android:icon="@drawable/waves_logo_grey"
         android:theme="@style/AppTheme" >
@@ -39,6 +40,10 @@
             android:label=""
             android:screenOrientation="portrait" >
         </activity>
+        <activity 
+            android:name="com.littlecloudcollective.waves.SoundAdapter"
+            android:label="@string/title_activity_sound_adapter"
+            />
         <activity
             android:name="com.littlecloudcollective.waves.TabsPagerAdapter"
             android:label="@string/title_activity_tabs_pager_adapter" >
@@ -48,6 +53,12 @@
             android:label="@string/title_activity_audio_recorder"
             android:screenOrientation="portrait"
             android:parentActivityName="com.littlecloudcollective.waves.LandingActivity" >
+        </activity>
+        <activity
+            android:name="com.littlecloudcollective.waves.AudioDetailsActivity"
+            android:label="@string/title_activity_audio_recorder_details"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.littlecloudcollective.waves.AudioRecorderActivity" >
         </activity>
 
         <meta-data

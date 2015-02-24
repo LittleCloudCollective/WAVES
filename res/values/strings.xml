@@ -6,6 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_tabs_pager_adapter">TabsPagerAdapter</string>
     <string name="title_activity_audio_recorder"></string>
+    <string name="title_activity_audio_recorder_details"></string>
+    <string name="title_activity_sound_adapter"></string>
     <string name="feed_tab">Feed</string>
     <string name="discover_tab">Discover</string>
     <string name="profile_tab">Profile</string>

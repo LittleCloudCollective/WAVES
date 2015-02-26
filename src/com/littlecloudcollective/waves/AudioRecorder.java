@@ -27,7 +27,7 @@ public class AudioRecorder {
 	
 	public AudioRecorder(Context c){
 		context = c;
-		fileName = context.getCacheDir() + "/wavesaudio/" + "temp" +".3gp";
+		fileName = context.getCacheDir().getAbsolutePath() + "/tempWave.3gp";
 	}
     
     public void onRecord(boolean start) {

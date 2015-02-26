@@ -13,17 +13,18 @@ public class AudioDetailsActivity extends ActionBarActivity {
 	private View mPlaybackButton;
 	private View mPublishButton;
 	private EditText mEdit;
+	private AudioRecorder mPlayer;
 	private String mCaption;
 	private double mLatitude;
 	private double mLongitude;
 	private String mSound;
-	private AudioRecorder mPlayer = new AudioRecorder();
 	public static final String LAT_TAG = "com.littlecloudcollective.waves.latitude";
 	public static final String LONG_TAG = "com.littlecloudcollective.waves.longitude";
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
+		mPlayer = new AudioRecorder(getApplicationContext());
 		
 		setContentView(R.layout.activity_record_details);
 		ActionBar actionBar = getSupportActionBar();

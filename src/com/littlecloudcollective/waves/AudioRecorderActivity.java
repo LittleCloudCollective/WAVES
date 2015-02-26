@@ -19,7 +19,7 @@ import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListe
 import com.google.android.gms.location.LocationServices;
 
 public class AudioRecorderActivity extends ActionBarActivity implements ConnectionCallbacks, OnConnectionFailedListener {
-	private AudioRecorder mRecorder = new AudioRecorder();
+	private AudioRecorder mRecorder;
 	private View mRecordButton;
 	private View mNextButton;
 	private SeekBar mSeekBar;
@@ -32,9 +32,11 @@ public class AudioRecorderActivity extends ActionBarActivity implements Connecti
 	public double mLatitude;
 	public double mLongitude;
 	
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
+		mRecorder = new AudioRecorder(getApplicationContext());
      
 		setContentView(R.layout.activity_record);
 		final Handler mHandler = new Handler();

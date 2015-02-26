@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -27,7 +28,7 @@ import com.littlecloudcollective.waves.volley.AppController;
 public class SoundFragment extends ListFragment {
 	private static final String TAG = "SoundFragment";
 	private ArrayList<Sound> mSounds = new ArrayList<Sound>();
-	private AudioRecorder mPlayer = new AudioRecorder();
+	private AudioRecorder mPlayer;
 	private ImageButton mImageButton;
 	SoundAdapter adapter;
 	private String URL_FEED = "http://puncture.org/wavesdemo/feed.json";
@@ -43,7 +44,7 @@ public class SoundFragment extends ListFragment {
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
 		
-		
+		mPlayer = new AudioRecorder(getActivity().getApplicationContext());
 		// First check for cached request
 				Cache cache = AppController.getInstance().getRequestQueue().getCache();
 				Entry entry = cache.get(URL_FEED);

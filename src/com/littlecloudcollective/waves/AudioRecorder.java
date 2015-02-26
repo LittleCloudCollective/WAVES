@@ -21,10 +21,16 @@ public class AudioRecorder {
     public boolean isPlaying;
     public String lastFileName;
     int recordTime;
-    private String fileName = context.getCacheDir() + "/wavesaudio/" + "temp" +".3gp";
+    String fileName;
+    
     Handler handler = new Handler();
 	
-	public void onRecord(boolean start) {
+	public AudioRecorder(Context c){
+		context = c;
+		fileName = context.getCacheDir() + "/wavesaudio/" + "temp" +".3gp";
+	}
+    
+    public void onRecord(boolean start) {
 		if (start) {
             startRecording();
         } else {
@@ -61,7 +67,7 @@ public class AudioRecorder {
     }
 	
 	public void startRecording() {
-        mRecorder = new MediaRecorder();
+		mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mRecorder.setOutputFile(fileName);
@@ -74,7 +80,7 @@ public class AudioRecorder {
             Log.e(LOG_TAG, "prepare() failed");
         }
         
-        Log.w("LCC", "Start playing made it this far! 1!");
+        
         
         mRecorder.start();
         isRecording = true;

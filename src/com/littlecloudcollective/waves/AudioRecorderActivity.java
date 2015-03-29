@@ -72,10 +72,10 @@ public class AudioRecorderActivity extends ActionBarActivity implements Connecti
 	    
 	    mRecordButton = findViewById(R.id.recordPlayButton);
 	    mRecordButton.setOnTouchListener(new View.OnTouchListener() {
-			
+		
+	    	//On touching button, start recording; on letting go, stop recording
 	    	@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
 				switch(event.getAction()){
 	             case MotionEvent.ACTION_DOWN:
 	                 mRecorder.onRecord(true);

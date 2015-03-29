@@ -44,4 +44,17 @@ public class SaveSharedPreference {
     	return getSharedPreferences(ctx).getString(PREF_PASSWORD, "");
     }
     
+    //Clearing the username/password
+    public static void clearUsername(Context ctx){
+    	Editor editor = getSharedPreferences(ctx).edit();
+        editor.putString(PREF_USER_NAME, "");
+        editor.commit();
+    }
+    
+    public static void clearPassword(Context ctx){
+    	Editor editor = getSharedPreferences(ctx).edit();
+        editor.putString(PREF_PASSWORD, "");
+        editor.commit();
+    }
+    
 }

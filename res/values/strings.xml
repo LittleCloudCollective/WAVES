@@ -16,5 +16,11 @@
     <string name="sound_time_label">Time elapsed</string>
     <string name="user_username_label">priyankacpathak</string>
     <string name="record_label">Record</string>
+    <string name="logout_label">Log out</string>
+    <string name ="about_label">About</string>
+    <string name="logout_dialog_message">Are you sure you want to log out?</string>
+    <string name="logout_dialog_title">Log out</string>
+    <string name="ok">Yes</string>
+    <string name="cancel">No</string>
 
 </resources>

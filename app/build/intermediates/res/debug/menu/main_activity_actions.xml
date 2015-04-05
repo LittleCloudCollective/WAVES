@@ -1,0 +1,29 @@
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:WAVES="http://schemas.android.com/apk/res-auto">
+        
+         <!-- Record should appear as action button -->
+   		 <item android:id="@+id/action_record"
+          android:icon="@drawable/record_icon"
+          android:title="@string/record_label"
+          WAVES:showAsAction="always" />
+   		 
+   		 <!-- About and Log Out should appear as action button -->
+   		 <item
+	     android:id="@+id/menu_overflow"
+	     android:icon="@drawable/overflow_icon"
+	     WAVES:showAsAction="always">
+	     <menu>
+	        <item android:id="@+id/action_about"
+          	android:title="@string/about_label"
+          	WAVES:showAsAction="never" />
+   		 
+   			 <item android:id="@+id/action_logout"
+         	 android:title="@string/logout_label"
+         	 WAVES:showAsAction="never" />
+	
+	     </menu>
+</item>
+        
+    </menu>
+<!-- From: file:/Users/aez/src/AndroidStudioProjects/WAVES/app/src/main/res/menu/main_activity_actions.xml -->

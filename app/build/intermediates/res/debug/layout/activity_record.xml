@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151413" >
+
+    <ImageButton
+        android:id="@+id/recordPlayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:background="#151413"
+        android:src="@drawable/record_button_dynamic"
+        tools:ignore="ContentDescription" />
+
+    <SeekBar
+        android:id="@+id/SeekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/recordPlayButton"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="64dp"
+        android:max="30"
+        android:progress="0"
+        android:progressDrawable="@drawable/seekbar_scrubber_progress_horizontal_holo_light"
+        android:thumb="@drawable/seekbar_scrubber_control_selector_holo_light" />
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background = "#151413"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/close_button" />
+
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/SeekBar"
+        android:src="@drawable/next_button" />
+
+</RelativeLayout><!-- From: file:/Users/aez/src/AndroidStudioProjects/WAVES/app/src/main/res/layout/activity_record.xml -->
